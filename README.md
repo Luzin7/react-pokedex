@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Projeto React Pokedéx
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Pré-requisitos
+Para a realização desse projeto, deverá ser utilizado a API PokeAPI, com o endpoint https://pokeapi.co/api/v2/generation/1
 
-## Available Scripts
+O retorno dela é um objeto com diversas chaves, dentre elas a chave pokemon_species, onde estão todos os 151 pokemons da primeira geração, no entanto cada pokemon tem seu próprio endpoint, que também retorna um objeto com todas suas caracteristicas as quais serão utilizadas nos futuros requisitos.
 
-In the project directory, you can run:
+O desafio é receber os 151 pokemons da primeira geração e renderizar não somente seu nome mas acessar sua url e suas chaves.
 
-### `npm start`
+Documentação da API https://pokeapi.co/docs/v2#pokemon
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+(Dica: Passe um tempo tentando fazer o retorno correto do objeto, que deverá conter ao menos 10 pokemons, após resolvê-los, foque nos requisitos, e somente quando a aplicação estiver funcional trabalhe a estilização. Intercalar estilização e estrutação apenas faz perder o tempo que pode ser usado para implementar o código e faz perder a linha de raciocínio de desenvolvimento.)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Requisitos do Projeto
 
-### `npm test`
+### Obrigatórios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[.1] Crie um componente chamado Welcome, esse componente deverá conter um input do tipo 'text' com a label 'Usuário', e também um botão com a label 'Login'
 
-### `npm run build`
+[.2] O componente Welcome deverá ser renderizado no App.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[.3] O botão de Login, deverá ficar desabilitado, e só poderá ficar habilitado, se o campo do usuário tiver mais de 3 caracteres.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[.4] Após clicar no botão de Login, o componente Welcome não poderá mais ser renderizado, e ao invéz dele deverá ser renderizado o componente Pokedex.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+(Dica: Pesquise como funciona operadores ternários, e combine ele com algum estado que guarda se o login foi feito ou não);
 
-### `npm run eject`
+[.5] Crie um componente Pokedex, este componente deverá ter um componente Header.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+(Dica: A requisição da API poderá ser feita ao clicar no botão login);
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[.6] No Header, deverá ser renderizado uma tag <h1/> com a label 'Bem Vindo,' e logo em seguia o nome que o usuário digitou em seu login. Também deve conter uma tag <p/> com a label 'Esta é a sua Pokedéx!'
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[.7]Crie um component PokemonCard que irá renderizar cada pokemon, também deverá conter um elemento que guarda a imagem do pokemon, e seu atributo 'alt' deverá ser o nome do pokemon.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[.8] O elemento que renderiza cada pokemon também deverá conter as tags <h1/>, <h2/> e <p/> que deverão rendezizar o nome do pokemon, seu tipo e sua descrição respectivamente.
 
-## Learn More
+[.9] O componente PokemonCard deverá ser renderizado no componente Pokedex abaixo do componente Header.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Bônus
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[.10] Na section do componente Pokedex, deverá ter um input do tipo 'text', no qual este input irá filtrar os pokemons renderizados, ou seja, se for digitado o nome Alakazan, só deverá aparecer o pokemon Alakazan.
