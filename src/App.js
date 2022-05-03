@@ -56,7 +56,7 @@ export default class App extends React.Component {
           </>
         ) : (
           <div className="container">
-            <h1 className="title">Welcome</h1>
+            <h1 className="title title__welcome">Welcome</h1>
             <form className="form">
               <label className="form__label">User</label>
               <input

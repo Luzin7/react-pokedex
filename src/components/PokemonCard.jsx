@@ -1,19 +1,17 @@
 import React, { Component } from "react";
 
+import "../style/components/pokemon-card/card-Box.css";
+
 export default class PokemonCard extends Component {
   render() {
     const { name, type, img } = this.props;
     return (
-      <div>
-        <section>
-          <div>
-            <span>
-              <img src={img} alt={name} />
-            </span>
-            <h1>{`Este(a) é ${name}`}</h1>
-            <h2>{`Seu tipo é ${type}`}</h2>
-          </div>
-        </section>
+      <div className="card__box">
+        <span className="pokemon__img">
+          <img src={img} alt={name} />
+        </span>
+        <h1 className="title name__pokemon">{`Este(a) é ${name}`}</h1>
+        <h2 className="title type__pokemon">{`Seu tipo é ${type}`}</h2>
       </div>
     );
   }

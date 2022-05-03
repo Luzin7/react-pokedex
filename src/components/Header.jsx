@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import '../style/header.css'
+import "../style/header.css";
 
 export default class Header extends Component {
   render() {
     const { userName } = this.props;
     return (
       <header>
-        <section>
-          <div>
-            <h1>{`Olá! seja bem vindo(a), ${userName}.`}</h1>
-            <p>Esta é a sua Pokedéx!</p>
+        <section className="header">
+          <div className="content__header">
+            <h1 className="title title__header">Olá, <span>{userName}!</span></h1>
+            <p>
+              Esta é a sua <span>Pokedéx</span>!
+            </p>
           </div>
         </section>
       </header>
