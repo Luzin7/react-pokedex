@@ -1,0 +1,6 @@
+.card__box{
+  background-color: #FE8A71;
+  margin: 2px;
+  display: flex;
+  flex-flow: column wrap;
+}
