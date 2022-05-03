@@ -1,3 +1,31 @@
-header{
-  background-color: aqua;
+.header{
+  background-color: #F6CD61;
+  text-align: center;
+}
+
+.content__header .title__header{
+  font-weight: bold;
+  font-size: 2.5em;
+  text-shadow:1px 2px 2px white;
+  transition: all 0.2s;
+}
+.content__header .title__header:hover{
+  text-shadow:2px 2px 2px white;
+}
+
+.content__header p{
+  font-size: 2em;
+  font-weight: 400;
+}
+
+.content__header span{
+  color: #FE8A71;
+  font-weight: 500;
+  text-shadow:2px 2px 2px #3DA4AB;
+  transition: all .4s;
+}
+
+.content__header span:hover{
+  color: #3DA4AB;
+  text-shadow:2px 2px 2px #FE8A71;
 }
