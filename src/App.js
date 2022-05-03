@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import pokeRequest from "./data/pokemons";
 import Pokedex from "./components/Pokedex";
 import Header from "./components/Header";
+import "./style/normalize.css";
+import "./style/reset.css";
+import "./style/home.css";
 
 export default class App extends React.Component {
   constructor() {
@@ -41,7 +44,7 @@ export default class App extends React.Component {
     const pokeReq = await pokeRequest();
     this.setState({ logged: true, data: pokeReq });
   };
-  
+
   render() {
     const { userName, disabled, logged, data } = this.state;
     return (
@@ -52,24 +55,28 @@ export default class App extends React.Component {
             <Pokedex data={data} />
           </>
         ) : (
-          <form className="form">
-            <label className="form__name__label">User</label>
-            <input
-              onChange={this.handleChange}
-              className="form__name__input"
-              type="text"
-              name="userName"
-            />
-            <label className="form__login__label">Login</label>
-            <button
-              onClick={this.renderPokedex}
-              className="form__login__button"
-              type="button"
-              disabled={disabled}
-            >
-              Submit
-            </button>
-          </form>
+          <div className="container">
+            <h1 className="title">Welcome</h1>
+            <form className="form">
+              <label className="form__label">User</label>
+              <input
+                onChange={this.handleChange}
+                className="form__name__input"
+                type="text"
+                name="userName"
+              />
+              <div className="button__area">
+                <button
+                  className="form__login__button"
+                  onClick={this.renderPokedex}
+                  type="button"
+                  disabled={disabled}
+                >
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
         )}
       </div>
     );
