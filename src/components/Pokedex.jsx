@@ -8,11 +8,12 @@ export class Pokedex extends Component {
     const { data } = this.props;
     return (
       <main>
-        <section className="main">
+        <section id="maine" className="main">
           <div className="content__main">
             {data.map((data) => (
               <PokemonCard
                 key={data.name}
+                order={data.order}
                 name={data.name}
                 type={data.types[0].type.name}
                 img={data.sprites.front_default}
