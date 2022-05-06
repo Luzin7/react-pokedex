@@ -1,6 +1,6 @@
-.container{
+.container {
   display: flex;
-  background-color: #F6CD61;
+  background-color: #f6cd61;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -8,30 +8,29 @@
 }
 
 /* Colocar cor */
-.form{
+.form {
   display: flex;
   flex-direction: column;
   width: 35vh;
 }
 
-.title{
+.title {
   text-shadow: 2px 1px 1px white;
 }
 
-.title__welcome{
+.title__welcome {
   font-size: 7em;
   font-weight: 400;
   margin-bottom: 40px;
   transition: all 0.4s;
-
 }
 
-.title__welcome:hover{
+.title__welcome:hover {
   /* deslocamento-x | deslogamento-y | cor */
   text-shadow: 4px 4px white;
 }
 
-.form__label{
+.form__label {
   text-align: center;
   font-size: 24px;
   font-weight: 200;
@@ -40,6 +39,7 @@
 
 .form__name__input {
   border-style: none;
+  outline: none;
   background-color: white;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 2px 4px 5px 1px rgba(0, 0, 0, 0.2);
@@ -47,7 +47,6 @@
   margin-bottom: 20px;
 
   transition: all 0.4s;
- 
 }
 
 .form__name__input:hover {
@@ -66,12 +65,12 @@
   margin-bottom: 20px;
 }
 
-.button__area{
+.button__area {
   display: flex;
   justify-content: center;
 }
 
-.form__login__button{
+.form__login__button {
   background-color: white;
   border-style: none;
   border-radius: 7px;
@@ -82,7 +81,7 @@
   transition: 0.7s;
 }
 
-.form__login__button:hover{
+.form__login__button:hover {
   border-radius: 10px;
-  background-color:#FE8A71 ;
+  background-color: #fe8a71;
 }
