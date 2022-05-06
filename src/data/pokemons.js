@@ -40,5 +40,4 @@ async function pokemonList() {
 
   return pokemons;
 }
-
 export default pokemonList;
