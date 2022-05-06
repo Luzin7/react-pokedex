@@ -63,6 +63,7 @@ export default class App extends React.Component {
                 onChange={this.handleChange}
                 className="form__name__input"
                 type="text"
+                placeholder="Your username here"
                 name="userName"
               />
               <div className="button__area">
