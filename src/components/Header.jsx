@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../style/header.css';
 
 export default class Header extends Component {
@@ -27,3 +28,7 @@ export default class Header extends Component {
     );
   }
 }
+
+Header.propTypes = {
+  userName: PropTypes.string.isRequired
+};

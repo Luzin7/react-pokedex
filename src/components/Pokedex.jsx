@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import PokemonCard from './PokemonCard';
 import '../style/components/pokedex/main.css';
 import '../style/components/pokedex/content-main.css';
@@ -27,3 +28,7 @@ export class Pokedex extends Component {
 }
 
 export default Pokedex;
+
+Pokedex.propTypes = {
+  data: PropTypes.arrayOf(Object).isRequired
+};

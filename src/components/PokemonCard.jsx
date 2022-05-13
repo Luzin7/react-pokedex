@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import '../style/components/pokemon-card/card-Box.css';
 import '../style/components/pokemon-card/card-Content.css';
 
@@ -24,3 +25,10 @@ export default class PokemonCard extends Component {
     );
   }
 }
+
+PokemonCard.propTypes = {
+  order: PropTypes.arrayOf(Object),
+  name: PropTypes.arrayOf(Object),
+  type: PropTypes.arrayOf(Object),
+  img: PropTypes.arrayOf(Object)
+}.isRequired;
