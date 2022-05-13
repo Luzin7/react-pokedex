@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import PokemonCard from "./PokemonCard";
-import "../style/components/pokedex/main.css";
-import "../style/components/pokedex/content-main.css";
+import React, { Component } from 'react';
+import PokemonCard from './PokemonCard';
+import '../style/components/pokedex/main.css';
+import '../style/components/pokedex/content-main.css';
 
 export class Pokedex extends Component {
-  render() {
+  render () {
     const { data } = this.props;
     return (
       <main>
@@ -13,7 +13,7 @@ export class Pokedex extends Component {
             {data.map((data) => (
               <PokemonCard
                 key={data.name}
-                order={data.order}
+                order={data.id}
                 name={data.name}
                 type={data.types[0].type.name}
                 img={data.sprites.front_default}

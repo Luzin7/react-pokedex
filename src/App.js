@@ -1,41 +1,41 @@
-import React, { Component } from "react";
-import pokeRequest from "./data/pokemons";
-import Pokedex from "./components/Pokedex";
-import Header from "./components/Header";
-import "./style/normalize.css";
-import "./style/reset.css";
-import "./style/home.css";
+import React, { Component } from 'react';
+import pokeRequest from './data/pokemons';
+import Pokedex from './components/Pokedex';
+import Header from './components/Header';
+import './style/normalize.css';
+import './style/reset.css';
+import './style/home.css';
 
 export default class App extends React.Component {
-  constructor() {
+  constructor () {
     super();
     this.state = {
-      userName: "",
-      //Estado criado pra condicionar o 'disabled' do botao no App
+      userName: '',
+      // Estado criado pra condicionar o 'disabled' do botao no App
       disabled: true,
       logged: false,
-      data: null,
+      data: null
     };
   }
-  //Pegando o valor do target
+
+  // Pegando o valor do target
   handleChange = ({ target }) => {
-    //extraindo name e value de target
+    // extraindo name e value de target
     const { name, value } = target;
-    //atualizando 'userName' com o valor da 'name'
+    // atualizando 'userName' com o valor da 'name'
     this.setState({ [name]: value }, () => {
       this.verifyUserLenght();
     });
   };
 
   verifyUserLenght = () => {
-    //extraindo userName do state
+    // extraindo userName do state
     const { userName, disabled } = this.state;
-    //Condicionando 'disabled' do botão
+    // Condicionando 'disabled' do botão
     if (userName.length >= 3 && disabled === true) {
       this.setState({ disabled: false });
-    } //Deixar o botao inativo de inicio
-    else if (userName.length === 0 && disabled === false) {
-      //Atualizando o valor do toggle para 'true'
+    } else if (userName.length === 0 && disabled === false) {
+      // Atualizando o valor do toggle para 'true'
       this.setState({ disabled: true });
     }
   };
@@ -45,16 +45,18 @@ export default class App extends React.Component {
     this.setState({ logged: true, data: pokeReq });
   };
 
-  render() {
+  render () {
     const { userName, disabled, logged, data } = this.state;
     return (
       <div>
-        {logged ? (
+        {logged
+          ? (
           <>
             <Header userName={userName} />
             <Pokedex data={data} />
           </>
-        ) : (
+            )
+          : (
           <div className="container">
             <h1 className="title title__welcome">Welcome</h1>
             <form className="form">
@@ -78,7 +80,7 @@ export default class App extends React.Component {
               </div>
             </form>
           </div>
-        )}
+            )}
       </div>
     );
   }

@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import "../style/components/pokemon-card/card-Box.css";
-import "../style/components/pokemon-card/card-Content.css";
+import React, { Component } from 'react';
+import '../style/components/pokemon-card/card-Box.css';
+import '../style/components/pokemon-card/card-Content.css';
 
 export default class PokemonCard extends Component {
-  render() {
+  render () {
     const { order, name, type, img } = this.props;
     const caps = (str) => {
       return str.charAt(0).toUpperCase() + str.substr(1);
