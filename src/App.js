@@ -14,7 +14,8 @@ export default class App extends React.Component {
       // Estado criado pra condicionar o 'disabled' do botao no App
       disabled: true,
       logged: false,
-      data: null
+      data: null,
+      filtered: null
     };
   }
 
@@ -42,18 +43,35 @@ export default class App extends React.Component {
 
   renderPokedex = async () => {
     const pokeReq = await pokeRequest();
-    this.setState({ logged: true, data: pokeReq });
+    this.setState({ logged: true, data: pokeReq, filtered: pokeReq });
+  };
+
+  searchFilter = () => {
+    const { data } = this.state;
+    const search = document.querySelector('.filter').value;
+    const elementFiltered = data.filter((items) =>
+      items.name.toLowerCase().includes(search.toLowerCase())
+    );
+    this.setState({ filtered: elementFiltered });
   };
 
   render () {
-    const { userName, disabled, logged, data } = this.state;
+    const { userName, disabled, logged, filtered } = this.state;
     return (
       <div>
         {logged
           ? (
           <>
             <Header userName={userName} />
-            <Pokedex data={data} />
+            <div className='search__bar'>
+              <input
+                className="filter"
+                type="text"
+                onChange={this.searchFilter}
+                placeholder="Pesquisar pokemon"
+              />
+            </div>
+            <Pokedex data={filtered} />
           </>
             )
           : (
