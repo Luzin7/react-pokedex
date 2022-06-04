@@ -85,3 +85,20 @@
   border-radius: 10px;
   background-color: #fe8a71;
 }
+
+.search__bar{
+  text-align: center;
+}
+
+
+.filter{
+  background-color: #4a4e4d;
+  color: #f6cd61;
+  width: 240px;
+  height: 31px;
+  border-radius: 10px;
+  text-align: center;
+  border-style: none;
+  outline: none;
+  margin: 20px 0px;
+}
