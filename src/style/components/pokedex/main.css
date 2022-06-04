@@ -16,6 +16,6 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #f6cd61; /* creates padding around scroll thumb */
 }
 
-.main {
+body {
   background-color: #3da4ab;
 }
