@@ -18,7 +18,7 @@ export default class PokemonCard extends Component {
           <div className="pokemon__order">
             <span className="order">{`#${order}`}</span>
           </div>
-          <h1 className="title name__pokemon">{`Este(a) é ${caps(name)}`}</h1>
+          <h1 className="title name__pokemon">{`Este é ${caps(name)}`}</h1>
           <h2 className="type__pokemon">{`Seu tipo é ${caps(type)}`}</h2>
         </div>
       </div>
