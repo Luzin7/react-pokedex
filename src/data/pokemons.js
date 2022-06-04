@@ -1,28 +1,3 @@
-// //da pra melhorar isso aí, tenta dps
-// const pokeRequest = async () => {
-//   try {
-//     const pokeListRequest = await fetch(
-//       "https://pokeapi.co/api/v2/generation/1"
-//     );
-//     const pokeList = (await pokeListRequest.json()).pokemon_species;
-//     for (const key of pokeList) {
-//       key.info = await fetch(key.url)
-//         .then((resp) => resp.json())
-//         .then((resp) => console.log(resp));
-//     }
-//     let pokemons = Promise.all(pokeList);
-//     console.log(pokemons)
-//     return pokeList;
-//   } catch (error) {
-//     throw Error("error, my guy");
-//   }
-// };
-// pokeRequest();
-// var promise = pokeRequest();
-// promise.then((pokemonList) => console.log(pokemonList));
-
-// export default pokeRequest;
-
 const axios = require('axios');
 async function getPokemomByID (id) {
   const response = (await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`))
